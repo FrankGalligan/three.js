@@ -277,8 +277,12 @@ THREE.DRACOLoader.prototype = {
     },
 
     isVersionSupported: function(version, callback) {
-        return THREE.DRACOLoader.getDecoder(this.dracoDecoderType,
-            function(decoder) { return decoder.isVersionSupported(version); });
+        var supported = false;
+        THREE.DRACOLoader.getDecoder(this.dracoDecoderType,
+            function(decoder) {
+              supported = decoder.isVersionSupported(version); 
+            });
+        return supported;
     }
 };
 

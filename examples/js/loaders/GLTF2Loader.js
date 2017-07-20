@@ -567,23 +567,12 @@ THREE.GLTF2Loader = ( function () {
 		var bufferView = dependencies.bufferViews[ bufferViewID ];
 
 		var dracoLoader = this.dracoLoader;
-
-		dracoLoader.decodeDracoFile( bufferView, onDecode );
-
-		// dracoLoader.isVersionSupported( primitive.extensions[ this.name ], function ( isSupported ) {
-
-		// 	if ( isSupported ) {
-
-		// 		dracoLoader.decodeDracoFile( bufferView, onDecode );
-
-		// 	} else {
-
-		// 		throw new Error( 'GLTF2Loader: Incompatible Draco asset version: ' + extension.version + '.' );
-
-		// 	}
-
-		// } );
-
+                var support = dracoLoader.isVersionSupported(primitive.extensions[ this.name ].version);
+                if (support === true) {
+                  dracoLoader.decodeDracoFile( bufferView, onDecode );
+                } else {
+                  throw new Error( 'GLTF2Loader: Incompatible Draco asset version: ' + extension.version + '.' );
+                }
 	};
 
 	/**
