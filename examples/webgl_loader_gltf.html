@@ -98,6 +98,7 @@
 		<script src="../build/three.js"></script>
 		<script src="js/controls/OrbitControls.js"></script>
 		<script src="js/loaders/draco/draco_decoder.js"></script>
+		<script src="js/loaders/draco/draco_animation_decoder.js"></script>
 		<script src="js/loaders/draco/DRACOLoader.js"></script>
 		<script src="js/loaders/GLTFLoader.js"></script>
 
@@ -438,6 +439,15 @@
 					addLights: true,
 					extensions: ['glTF', 'glTF-Embedded'],
 					addEnvMap: true
+				},
+				{
+					name : 'BoxAnimated',
+					url: './models/gltf/BoxAnimated/%s/BoxAnimated.gltf',
+					cameraPos: new THREE.Vector3(0, 3, 5),
+					addLights: true,
+					addGround: true,
+					shadows: true,
+					extensions: ['glTF', 'glTF-Draco']
 				},
 				{
 					name : 'Duck',

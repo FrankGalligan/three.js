@@ -340,7 +340,82 @@ THREE.DRACOLoader.prototype = {
         if (typeof this.attributeOptions[attributeName] === 'undefined')
           this.attributeOptions[attributeName] = {};
         return this.attributeOptions[attributeName];
+    },
+
+    supportAnimationDecoding: function() {
+        if (typeof DracoAnimationDecoderModule === 'undefined') {
+          // No animation decoder is found.
+          return false;
+        }
+        return true;
+    },
+
+    decodeDracoAnimation: function(rawBuffer, callback) {
+      console.log("Calling decodeDracoAnimation in DracoLoader");
+     
+      if (typeof DracoAnimationDecoderModule === 'undefined') {
+          console.log('No animation decoder is found.');
+          return;
+        }
+
+        const decoderModule = DracoAnimationDecoderModule();
+        const buffer = new decoderModule.DecoderBuffer();
+        buffer.Init(new Int8Array(rawBuffer), rawBuffer.byteLength);
+        const decoder = new decoderModule.AnimationDecoder();
+          
+        console.log('Animation decoder is created.');
+
+        const dracoAnimation = new decoderModule.KeyframeAnimation();
+        decoder.DecodeBufferToKeyframeAnimation(buffer, dracoAnimation);
+
+        if (dracoAnimation.ptr == 0) {
+          console.log("Error: Decode animation failed.");
+          return;
+        }
+ 
+        const numFrames = dracoAnimation.num_frames();
+        console.log("Number of frames: " + numFrames);
+        const numComponents = dracoAnimation.num_components();
+        const timestampAttData = new decoderModule.DracoFloat32Array();
+        const animationAttData = new decoderModule.DracoFloat32Array();
+ 
+        const timestamps = new Float32Array(numFrames);
+        const animationData = new Float32Array(numFrames * numComponents);
+        for (let i = 0; i < numFrames; ++i) {
+          timestamps[i] = timestampAttData.GetValue(i);
+          for (let j = 0; j < numComponents; ++j) {
+            animationData[i * numComponents + j] =
+                animationAttData.GetValue(i * numComponents + j);
+          }
+        }
+        const decodedAnimation = {
+          input : timestamps,
+          output : animationData
+        }
+        /*
+ 70 
+ 73   assertTrue(decoder.GetTimestampAndAnimationData(dracoAnimation,
+ 74         timestampAttData, animationAttData));
+ 75 
+ 76   const timestamps = new Float32Array(numFrames);
+ 77   const animationData = new Float32Array(numFrames * numComponents);
+ 78   for (let i = 0; i < numFrames; ++i) {
+ 79       timestamps[i] = timestampAttData.GetValue(i);
+ 80       for (let j = 0; j < numComponents; ++j) {
+ 81         animationData[i * numComponents + j] =
+ 82             animationAttData.GetValue(i * numComponents + j);
+ 83       }
+ 84   }
+ 85   const animation = {
+ 86     timestamps : timestamps,
+ 87     animationData : animationData
+ 88   }
+ 89 
+ 90   return animation;
+ */
+        return decodedAnimation;
     }
+
 };
 
 // This function loads a JavaScript file and adds it to the page. "path"
@@ -401,6 +476,11 @@ THREE.DRACOLoader.loadDracoDecoder = function(dracoDecoder) {
           THREE.DRACOLoader.loadWebAssemblyDecoder(dracoDecoder);
         }, dracoDecoder);
   }
+}
+
+THREE.DRACOLoader.loadDracoAnimationDecoder = function(dracoAnimationDecoder) {
+    THREE.DRACOLoader.loadJavaScriptFile(dracoAnimationDecoder.dracoSrcPath +
+        'draco_animation_decoder.js', null, dracoAnimationDecoder);
 }
 
 /**

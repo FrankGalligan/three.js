@@ -123,6 +123,12 @@ THREE.GLTFLoader = ( function () {
 
 				}
 
+				if ( json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0 ) {
+
+					extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ] = new GLTFDracoAnimationCompressionExtension( this.dracoLoader );
+
+				}
+
 			}
 
 			console.time( 'GLTFLoader' );
@@ -196,6 +202,7 @@ THREE.GLTFLoader = ( function () {
 	var EXTENSIONS = {
 		KHR_BINARY_GLTF: 'KHR_binary_glTF',
 		KHR_DRACO_MESH_COMPRESSION: 'KHR_draco_mesh_compression',
+                DRACO_ANIMATION_COMPRESSION: 'Draco_animation_compression',
 		KHR_LIGHTS: 'KHR_lights',
 		KHR_MATERIALS_COMMON: 'KHR_materials_common',
 		KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS: 'KHR_materials_pbrSpecularGlossiness'
@@ -510,6 +517,39 @@ THREE.GLTFLoader = ( function () {
 		} );
 
 	};
+
+	function GLTFDracoAnimationCompressionExtension ( dracoLoader ) {
+
+		if ( ! dracoLoader ) {
+
+			throw new Error( 'THREE.GLTFLoader: No DRACOLoader instance provided.' );
+
+		}
+
+                if (!dracoLoader.supportAnimationDecoding()) {
+        
+			throw new Error( 'THREE.GLTFLoader: DRACOLoader does not support animation decoding.' );
+                }
+
+		this.name = EXTENSIONS.DRACO_ANIMATION_COMPRESSION;
+		this.dracoLoader = dracoLoader;
+	}
+
+	GLTFDracoAnimationCompressionExtension.prototype.decodeAnimation = function ( sampler, parser ) {
+
+		var dracoLoader = this.dracoLoader;
+		var bufferViewIndex = sampler.extensions[ this.name ].bufferView;
+                console.log("Calling decodeAnimation in GLTF");
+		return parser.getDependency( 'bufferView', bufferViewIndex ).then( function ( bufferView ) {
+
+			return new Promise( function ( resolve ) {
+
+				dracoLoader.decodeDracoAnimation( bufferView, resolve );
+
+			} );
+
+		} );
+        }
 
 	/**
 	 * Specular-Glossiness Extension
@@ -2075,6 +2115,8 @@ THREE.GLTFLoader = ( function () {
 	GLTFParser.prototype.loadAnimations = function () {
 
 		var json = this.json;
+		var parser = this;
+		var extensions = this.extensions;
 
 		return this._withDependencies( [
 
@@ -2093,14 +2135,24 @@ THREE.GLTFLoader = ( function () {
 					var sampler = animation.samplers[ channel.sampler ];
 
 					if ( sampler ) {
+			  
 
 						var target = channel.target;
 						var name = target.node !== undefined ? target.node : target.id; // NOTE: target.id is deprecated.
+
 						var input = animation.parameters !== undefined ? animation.parameters[ sampler.input ] : sampler.input;
 						var output = animation.parameters !== undefined ? animation.parameters[ sampler.output ] : sampler.output;
 
 						var inputAccessor = dependencies.accessors[ input ];
 						var outputAccessor = dependencies.accessors[ output ];
+
+                                                // If use Draco_animation_compression, then need fill the accessors with data.
+                                                if ( sampler.extensions && sampler.extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ] ) {
+                                                        console.log("Using draco animation extension");    
+                                                        var decodedAnimation = extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ].decodeAnimation( sampler, parser );
+                                                        inputAccessor["array"] = decodedAnimation.input;
+                                                        outputAccessor["array"] = decodedAnimation.output;
+                                                }
 
 						var node = dependencies.nodes[ name ];
 
