@@ -124,6 +124,10 @@ THREE.GLTFLoader = ( function () {
 				}
 
 				if ( json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0 ) {
+                                        if (json.extensions.Draco_animation_compression == undefined) {
+                                          onError( new Error( 'THREE.GLTFLoader: Animation compression extension used but not defined.' ) );
+                                          return;
+                                        }
 
 					extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ] = new GLTFDracoAnimationCompressionExtension( this.dracoLoader );
 
@@ -535,20 +539,15 @@ THREE.GLTFLoader = ( function () {
 		this.dracoLoader = dracoLoader;
 	}
 
-	GLTFDracoAnimationCompressionExtension.prototype.decodeAnimation = function ( sampler, parser ) {
+	GLTFDracoAnimationCompressionExtension.prototype.decodeAnimation = function ( compressedAnimation, parser ) {
 
 		var dracoLoader = this.dracoLoader;
-		var bufferViewIndex = sampler.extensions[ this.name ].bufferView;
-                console.log("Calling decodeAnimation in GLTF");
+		var bufferViewIndex = compressedAnimation.bufferView;
 		return parser.getDependency( 'bufferView', bufferViewIndex ).then( function ( bufferView ) {
-
-			return new Promise( function ( resolve ) {
-
-				dracoLoader.decodeDracoAnimation( bufferView, resolve );
-
-			} );
-
-		} );
+                    return new Promise(function(resolve) {
+                      resolve(dracoLoader.decodeDracoAnimation( bufferView ));
+                  });
+                });
         }
 
 	/**
@@ -1357,11 +1356,12 @@ THREE.GLTFLoader = ( function () {
 
 	GLTFParser.prototype.parse = function ( onLoad, onError ) {
 
+		var parser = this;
 		var json = this.json;
+                var extensions = this.extensions;
 
 		// Clear the loader cache
 		this.cache.removeAll();
-
 		// Fire the callback on complete
 		this._withDependencies( [
 
@@ -2112,7 +2112,7 @@ THREE.GLTFLoader = ( function () {
 
 	};
 
-	GLTFParser.prototype.loadAnimations = function () {
+        GLTFParser.prototype.loadCompressedAnimations = function () {
 
 		var json = this.json;
 		var parser = this;
@@ -2120,13 +2120,66 @@ THREE.GLTFLoader = ( function () {
 
 		return this._withDependencies( [
 
-			'accessors',
-			'nodes'
+			'bufferViews',
+			'accessors'
 
 		] ).then( function ( dependencies ) {
+                  return _each( json.extensions.Draco_animation_compression, function (compressedAnimation) {
+                    return extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ].decodeAnimation(compressedAnimation, parser);
+                  });
+                });
+        };
 
+	GLTFParser.prototype.loadAnimations = function () {
+
+		var json = this.json;
+		var parser = this;
+		var extensions = this.extensions;
+                var dependenciseList = [ 'bufferViews', 'accessors', 'nodes' ];
+                if (json.extensionsUsed !== undefined &&
+                    json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0)
+                  dependenciseList.push('compressedAnimations');
+
+		return this._withDependencies( dependenciseList ).then( function ( dependencies ) {
+               
+                  if (json.extensionsUsed !== undefined &&
+                      json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0) {
+                    // If using Draco animation compression, need to first
+                    // put decoded data back to all accessors of samplers.
+                        for (var i = 0; i < json.extensions.Draco_animation_compression.length;
+                            ++i) {
+                          var compressedAnimation = json.extensions.Draco_animation_compression[i];
+                          var decodedAnimation = dependencies.compressedAnimations[i];
+
+                          // Put timestamps to input
+                          var inputAccessorId = compressedAnimation.input;
+                          var inputAccessor = json.accessors[inputAccessorId];
+                          var itemSize = WEBGL_TYPE_SIZES[ inputAccessor.type ];
+                          var TypedArray = WEBGL_COMPONENT_TYPES[ inputAccessor.componentType ];
+                          var array = new TypedArray( decodedAnimation.timestamps, inputAccessor.byteOffset,
+                              inputAccessor.count * itemSize );
+                          dependencies.accessors[inputAccessorId] =  new THREE.BufferAttribute( array, itemSize );
+
+
+                          for (var j = 0; j < compressedAnimation.outputs.length; ++j) {
+                            var outputAccessorId = compressedAnimation.outputs[j];
+                            var outputAccessor = json.accessors[outputAccessorId];
+                            var itemSize = WEBGL_TYPE_SIZES[ outputAccessor.type ];
+                            var TypedArray = WEBGL_COMPONENT_TYPES[ outputAccessor.componentType ];
+
+                            // If attribute id is x, then the id in keyframes
+                            // will actually be x - 1.
+                            var array = new TypedArray(decodedAnimation.keyframes[compressedAnimation.attributesId[j] - 1],
+                                outputAccessor.byteOffset,
+                                outputAccessor.count * itemSize );
+                            dependencies.accessors[outputAccessorId] =  new THREE.BufferAttribute( array, itemSize );
+                          }
+                        }
+                  }
+                        
 			return _each( json.animations, function ( animation, animationId ) {
 
+                          console.log("Handle animatin in gltf");
 				var tracks = [];
 
 				for ( var i = 0; i < animation.channels.length; i ++ ) {
@@ -2145,14 +2198,6 @@ THREE.GLTFLoader = ( function () {
 
 						var inputAccessor = dependencies.accessors[ input ];
 						var outputAccessor = dependencies.accessors[ output ];
-
-                                                // If use Draco_animation_compression, then need fill the accessors with data.
-                                                if ( sampler.extensions && sampler.extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ] ) {
-                                                        console.log("Using draco animation extension");    
-                                                        var decodedAnimation = extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ].decodeAnimation( sampler, parser );
-                                                        inputAccessor["array"] = decodedAnimation.input;
-                                                        outputAccessor["array"] = decodedAnimation.output;
-                                                }
 
 						var node = dependencies.nodes[ name ];
 

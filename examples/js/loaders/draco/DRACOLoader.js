@@ -350,7 +350,7 @@ THREE.DRACOLoader.prototype = {
         return true;
     },
 
-    decodeDracoAnimation: function(rawBuffer, callback) {
+    decodeDracoAnimation: function(rawBuffer) {
       console.log("Calling decodeDracoAnimation in DracoLoader");
      
       if (typeof DracoAnimationDecoderModule === 'undefined') {
@@ -373,46 +373,44 @@ THREE.DRACOLoader.prototype = {
           return;
         }
  
-        const numFrames = dracoAnimation.num_frames();
-        console.log("Number of frames: " + numFrames);
-        const numComponents = dracoAnimation.num_components();
+        const numKeyframes = dracoAnimation.num_frames();
+        console.log("Number of frames: " + numKeyframes);
+
+        // Get timestamps.
         const timestampAttData = new decoderModule.DracoFloat32Array();
-        const animationAttData = new decoderModule.DracoFloat32Array();
- 
-        const timestamps = new Float32Array(numFrames);
-        const animationData = new Float32Array(numFrames * numComponents);
-        for (let i = 0; i < numFrames; ++i) {
+        if (!decoder.GetTimestamps(dracoAnimation, timestampAttData)) {
+          console.log("Error: Get timestamps failed.");
+          return;
+        }
+        const timestamps = new Float32Array(numKeyframes);
+        for (let i = 0; i < numKeyframes; ++i) {
           timestamps[i] = timestampAttData.GetValue(i);
-          for (let j = 0; j < numComponents; ++j) {
-            animationData[i * numComponents + j] =
-                animationAttData.GetValue(i * numComponents + j);
+        }
+
+        const numAnimations = dracoAnimation.num_animations();
+        const keyframes = new Array(numAnimations);
+        for (let keyframeId = 0; keyframeId < numAnimations; ++keyframeId) {
+          const animationAttData = new decoderModule.DracoFloat32Array();
+          // The id of keyframe attribute starts at 1.
+          if (!decoder.GetKeyframes(dracoAnimation, keyframeId + 1,
+                                    animationAttData)) {
+            console.log("Error: Get keyframes failed.");
+            return;
+          }
+          keyframes[keyframeId] = new Float32Array(animationAttData.size());
+          for (let i = 0; i < animationAttData.size(); ++i) {
+            keyframes[keyframeId][i] = animationAttData.GetValue(i);
           }
         }
+
         const decodedAnimation = {
-          input : timestamps,
-          output : animationData
+          timestamps : timestamps,
+          keyframes : keyframes
         }
         /*
- 70 
- 73   assertTrue(decoder.GetTimestampAndAnimationData(dracoAnimation,
- 74         timestampAttData, animationAttData));
- 75 
- 76   const timestamps = new Float32Array(numFrames);
- 77   const animationData = new Float32Array(numFrames * numComponents);
- 78   for (let i = 0; i < numFrames; ++i) {
- 79       timestamps[i] = timestampAttData.GetValue(i);
- 80       for (let j = 0; j < numComponents; ++j) {
- 81         animationData[i * numComponents + j] =
- 82             animationAttData.GetValue(i * numComponents + j);
- 83       }
- 84   }
- 85   const animation = {
- 86     timestamps : timestamps,
- 87     animationData : animationData
- 88   }
- 89 
- 90   return animation;
- */
+        if (resolve !== undefined)
+          resolve();
+          */
         return decodedAnimation;
     }
 
