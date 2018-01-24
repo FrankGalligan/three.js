@@ -5,9 +5,10 @@
 import { LinearFilter, NearestFilter, RGBFormat, RGBAFormat, DepthFormat, DepthStencilFormat, UnsignedShortType, UnsignedIntType, UnsignedInt248Type, FloatType, HalfFloatType, ClampToEdgeWrapping, NearestMipMapLinearFilter, NearestMipMapNearestFilter } from '../../constants.js';
 import { _Math } from '../../math/Math.js';
 
-function WebGLTextures( _gl, extensions, state, properties, capabilities, utils, infoMemory ) {
+function WebGLTextures( _gl, extensions, state, properties, capabilities, utils, infoMemory, infoRender ) {
 
-	var _isWebGL2 = ( typeof WebGL2RenderingContext !== 'undefined' && _gl instanceof window.WebGL2RenderingContext );
+	var _isWebGL2 = ( typeof WebGL2RenderingContext !== 'undefined' && _gl instanceof WebGL2RenderingContext );
+	var _videoTextures = {};
 
 	//
 
@@ -45,7 +46,7 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 
 	function makePowerOfTwo( image ) {
 
-		if ( image instanceof HTMLImageElement || image instanceof HTMLCanvasElement ) {
+		if ( image instanceof HTMLImageElement || image instanceof HTMLCanvasElement || image instanceof ImageBitmap ) {
 
 			var canvas = document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' );
 			canvas.width = _Math.floorPowerOfTwo( image.width );
@@ -102,8 +103,13 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 
 		deallocateTexture( texture );
 
-		infoMemory.textures --;
+		if ( texture.isVideoTexture ) {
 
+			delete _videoTextures[ texture.id ];
+
+		}
+
+		infoMemory.textures --;
 
 	}
 
@@ -193,6 +199,8 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 	function setTexture2D( texture, slot ) {
 
 		var textureProperties = properties.get( texture );
+
+		if ( texture.isVideoTexture ) updateVideoTexture( texture );
 
 		if ( texture.version > 0 && textureProperties.__version !== texture.version ) {
 
@@ -781,6 +789,22 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 			state.bindTexture( target, webglTexture );
 			_gl.generateMipmap( target );
 			state.bindTexture( target, null );
+
+		}
+
+	}
+
+	function updateVideoTexture( texture ) {
+
+		var id = texture.id;
+		var frame = infoRender.frame;
+
+		// Check the last frame we updated the VideoTexture
+
+		if ( _videoTextures[ id ] !== frame ) {
+
+			_videoTextures[ id ] = frame;
+			texture.update();
 
 		}
 
