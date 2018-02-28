@@ -11,6 +11,7 @@ THREE.GLTFLoader = ( function () {
 	function GLTFLoader( manager ) {
 
 		this.manager = ( manager !== undefined ) ? manager : THREE.DefaultLoadingManager;
+		this.dracoLoader = null;
 
 	}
 
@@ -65,6 +66,12 @@ THREE.GLTFLoader = ( function () {
 
 			this.path = value;
 			return this;
+
+		},
+
+		setDRACOLoader: function ( dracoLoader ) {
+
+			this.dracoLoader = dracoLoader;
 
 		},
 
@@ -131,6 +138,21 @@ THREE.GLTFLoader = ( function () {
 
 					extensions[ EXTENSIONS.KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS ] = new GLTFMaterialsPbrSpecularGlossinessExtension();
 
+				}
+
+				if ( json.extensionsUsed.indexOf( EXTENSIONS.KHR_DRACO_MESH_COMPRESSION ) >= 0 ) {
+
+					extensions[ EXTENSIONS.KHR_DRACO_MESH_COMPRESSION ] = new GLTFDracoMeshCompressionExtension( this.dracoLoader );
+
+				}
+
+				if ( json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0 ) {
+					if (json.extensions.Draco_animation_compression == undefined) {
+						onError( new Error( 'THREE.GLTFLoader: Animation compression extension used but not defined.' ) );
+						return;
+					}
+
+					extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ] = new GLTFDracoAnimationCompressionExtension( this.dracoLoader );
 				}
 
 			}
@@ -207,6 +229,8 @@ THREE.GLTFLoader = ( function () {
 
 	var EXTENSIONS = {
 		KHR_BINARY_GLTF: 'KHR_binary_glTF',
+		KHR_DRACO_MESH_COMPRESSION: 'KHR_draco_mesh_compression',
+		DRACO_ANIMATION_COMPRESSION: 'Draco_animation_compression',
 		KHR_LIGHTS: 'KHR_lights',
 		KHR_MATERIALS_COMMON: 'KHR_materials_common',
 		KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS: 'KHR_materials_pbrSpecularGlossiness'
@@ -464,6 +488,92 @@ THREE.GLTFLoader = ( function () {
 		}
 
 	}
+
+	/**
+	 * DRACO Mesh Compression Extension
+	 *
+	 * Specification: https://github.com/KhronosGroup/glTF/pull/874
+	 *
+	 * TODO:
+	 * - Support additional uncompressed attributes alongside those provided by Draco.
+	 * - Support fallback to uncompressed data if decoder is not unavailable.
+	 * - `primitive.attributes` should be passed to DRACOLoader, but isn't yet supported.
+	 */
+	function GLTFDracoMeshCompressionExtension ( dracoLoader ) {
+
+		if ( ! dracoLoader ) {
+
+			throw new Error( 'THREE.GLTFLoader: No DRACOLoader instance provided.' );
+
+		}
+
+		this.name = EXTENSIONS.KHR_DRACO_MESH_COMPRESSION;
+		this.dracoLoader = dracoLoader;
+                this.glTFNameToThreeJSName = {
+                  'POSITION' : 'position',
+                  'NORMAL' : 'normal',
+                  'TEXCOORD_0' : 'uv',
+                  'TEXCOORD0' : 'uv',
+                  'TEXCOORD' : 'uv',
+                  'TEXCOORD_1' : 'uv2',
+                  'COLOR_0' : 'color',
+                  'COLOR0' : 'color',
+                  'COLOR' : 'color',
+                  'WEIGHTS_0' : 'skinWeight',
+                  'JOINTS_0' : 'skinIndex'
+                };
+	}
+
+	GLTFDracoMeshCompressionExtension.prototype.decodePrimitive = function ( primitive, parser ) {
+
+		var dracoLoader = this.dracoLoader;
+		var bufferViewIndex = primitive.extensions[ this.name ].bufferView;
+                var attributesIdMap = primitive.extensions[ this.name ].attributes;
+                var attributeMap = {};
+                for (var attributeName in attributesIdMap) {
+                  attributeMap[this.glTFNameToThreeJSName[attributeName]] = attributesIdMap[attributeName];
+                }
+
+		return parser.getDependency( 'bufferView', bufferViewIndex ).then( function ( bufferView ) {
+
+			return new Promise( function ( resolve ) {
+
+				dracoLoader.decodeDracoFile( bufferView, resolve, attributeMap );
+
+			} );
+
+		} );
+
+	};
+
+	function GLTFDracoAnimationCompressionExtension ( dracoLoader ) {
+
+		if ( ! dracoLoader ) {
+
+			throw new Error( 'THREE.GLTFLoader: No DRACOLoader instance provided.' );
+
+		}
+
+                if (!dracoLoader.supportAnimationDecoding()) {
+        
+			throw new Error( 'THREE.GLTFLoader: DRACOLoader does not support animation decoding.' );
+                }
+
+		this.name = EXTENSIONS.DRACO_ANIMATION_COMPRESSION;
+		this.dracoLoader = dracoLoader;
+	}
+
+	GLTFDracoAnimationCompressionExtension.prototype.decodeAnimation = function ( compressedAnimation, parser ) {
+
+		var dracoLoader = this.dracoLoader;
+		var bufferViewIndex = compressedAnimation.bufferView;
+		return parser.getDependency( 'bufferView', bufferViewIndex ).then( function ( bufferView ) {
+                    return new Promise(function(resolve) {
+                                       console.log("decodeDracoAnimation bufferViewIndex: " + bufferViewIndex);
+                      resolve(dracoLoader.decodeDracoAnimation( bufferView ));
+                  });
+                });
+        }
 
 	/**
 	 * Specular-Glossiness Extension
@@ -1571,6 +1681,121 @@ THREE.GLTFLoader = ( function () {
 	};
 
 	/**
+         * @param {number} compressionIndex
+	 * @return {Promise<Array<ArrayBuffer>>}
+	 */
+	GLTFParser.prototype.loadCompressedAnimation = function (compressionIndex) {
+
+		var json = this.json;
+		var parser = this;
+		var extensions = this.extensions;
+		var animExt = extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ];
+
+		if ( animExt.decompressedAnimations !== undefined && animExt.decompressedAnimations[ compressionIndex ] !== undefined ) {
+
+			return animExt.decompressedAnimations[ compressionIndex ];
+
+		}
+
+		var decodedData = extensions[ EXTENSIONS.DRACO_ANIMATION_COMPRESSION ].decodeAnimation(
+		       json.extensions.Draco_animation_compression[ compressionIndex ], parser );
+
+		if ( animExt.decompressedAnimations === undefined ) {
+
+			animExt.decompressedAnimations = [];
+
+		}
+
+		animExt.decompressedAnimations[ compressionIndex ] = decodedData;
+		return animExt.decompressedAnimations[ compressionIndex ];
+	};
+
+	/**
+	 * @param {number} accessorIndex
+	 * @return {Promise<THREE.BufferAttribute>}
+	 */
+	GLTFParser.prototype.loadDracoCompressedAccessor = function ( accessorIndex ) {
+		var json = this.json;
+
+                // Get glTF accessor
+		var inputAccessor = json.accessors[ accessorIndex ];
+
+		// Find which animation compresison object the accessor references.
+		var compressionIndex = -1;
+		var inputIndex = -1;
+		var outputIndex = -1;
+		for ( var i = 0; i < json.extensions.Draco_animation_compression.length && compressionIndex == -1; ++i ) {
+
+			if ( json.extensions.Draco_animation_compression[i].input == accessorIndex ) {
+
+				compressionIndex = i;
+				inputIndex = i;
+				break;
+
+			} else {
+
+				for ( var j = 0; j < json.extensions.Draco_animation_compression[ i ].outputs.length; ++j ) {
+
+					if (json.extensions.Draco_animation_compression[ i ].outputs[ j ] == accessorIndex) {
+
+						compressionIndex = i;
+						outputIndex = j;
+						break;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		if ( compressionIndex == -1 ) {
+
+			return null;
+
+		}
+
+		var compressedAnimation = json.extensions.Draco_animation_compression[ compressionIndex ];
+
+		return this.loadCompressedAnimation(compressionIndex).then( function ( decodedAnimation ) {
+
+			var accessor;
+
+			if ( inputIndex >= 0 ) {
+
+				var inputAccessorId = compressedAnimation.input;
+				var inputAccessor = json.accessors[ inputAccessorId ];
+				var itemSize = WEBGL_TYPE_SIZES[ inputAccessor.type ];
+				var TypedArray = WEBGL_COMPONENT_TYPES[ inputAccessor.componentType ];
+
+				var array = new TypedArray( decodedAnimation.timestamps, inputAccessor.byteOffset,
+								inputAccessor.count * itemSize );
+				accessor = new THREE.BufferAttribute( array, itemSize );
+
+			} else {
+
+				var outputAccessorId = compressedAnimation.outputs[ outputIndex ];
+				var outputAccessor = json.accessors[ outputAccessorId ];
+				var itemSize = WEBGL_TYPE_SIZES[ outputAccessor.type ];
+				var TypedArray = WEBGL_COMPONENT_TYPES[ outputAccessor.componentType ];
+
+				// If attribute id is x, then the id in keyframes
+				// will actually be x - 1.
+				var array = new TypedArray( decodedAnimation.keyframes[compressedAnimation.attributesId[outputIndex] - 1],
+								outputAccessor.byteOffset,
+								outputAccessor.count * itemSize );
+				accessor =  new THREE.BufferAttribute( array, itemSize );
+
+			}
+
+			return accessor;
+
+		} );
+
+	};
+
+	/**
 	 * Specification: https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/README.md#accessors
 	 * @param {number} accessorIndex
 	 * @return {Promise<THREE.BufferAttribute|THREE.InterleavedBufferAttribute>}
@@ -1579,6 +1804,7 @@ THREE.GLTFLoader = ( function () {
 
 		var parser = this;
 		var json = this.json;
+		var accIndex = accessorIndex;
 
 		var accessorDef = this.json.accessors[ accessorIndex ];
 
@@ -1590,8 +1816,12 @@ THREE.GLTFLoader = ( function () {
 
 		} else {
 
-			pendingBufferViews.push( null );
+			if (json.extensionsUsed !== undefined &&
+				json.extensionsUsed.indexOf( EXTENSIONS.DRACO_ANIMATION_COMPRESSION ) >= 0) {
 
+				pendingBufferViews.push( parser.loadDracoCompressedAccessor( accIndex ) );
+
+			}
 		}
 
 		if ( accessorDef.sparse !== undefined ) {
@@ -1602,6 +1832,18 @@ THREE.GLTFLoader = ( function () {
 		}
 
 		return Promise.all( pendingBufferViews ).then( function ( bufferViews ) {
+
+			if ( json.bufferViews[ accessorDef.bufferView ] === undefined ) {
+
+				var accessor = bufferViews[ 0 ];
+				if ( accessor == null ) {
+
+					return null;
+				}
+
+				return accessor;
+
+			}
 
 			var bufferView = bufferViews[ 0 ];
 
@@ -1988,6 +2230,8 @@ THREE.GLTFLoader = ( function () {
 	 */
 	GLTFParser.prototype.loadGeometries = function ( primitives ) {
 
+		var parser = this;
+		var extensions = this.extensions;
 		var cache = this.primitiveCache;
 
 		return this.getDependencies( 'accessor' ).then( function ( accessors ) {
@@ -1997,6 +2241,13 @@ THREE.GLTFLoader = ( function () {
 			for ( var i = 0, il = primitives.length; i < il; i ++ ) {
 
 				var primitive = primitives[ i ];
+
+				// TODO: See if Draco will work with cached.
+				if ( primitive.extensions && primitive.extensions[ EXTENSIONS.KHR_DRACO_MESH_COMPRESSION ] ) {
+
+					return extensions[ EXTENSIONS.KHR_DRACO_MESH_COMPRESSION ].decodePrimitive( primitive, parser );
+
+				}
 
 				// See if we've already created this geometry
 				var cached = getCachedGeometry( cache, primitive );
@@ -2366,24 +2617,14 @@ THREE.GLTFLoader = ( function () {
 
 	};
 
-	/**
-	 * Specification: https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#animations
-	 * @param {number} animationIndex
-	 * @return {Promise<THREE.AnimationClip>}
-	 */
+
 	GLTFParser.prototype.loadAnimation = function ( animationIndex ) {
 
 		var json = this.json;
-
 		var animationDef = this.json.animations[ animationIndex ];
+		var dependenciseList = [ 'accessor', 'node' ];
 
-		return this.getMultiDependencies( [
-
-			'accessor',
-			'node'
-
-		] ).then( function ( dependencies ) {
-
+		return this.getMultiDependencies( dependenciseList ).then( function ( dependencies ) {
 			var tracks = [];
 
 			for ( var i = 0, il = animationDef.channels.length; i < il; i ++ ) {
