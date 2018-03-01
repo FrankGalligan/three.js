@@ -52,6 +52,7 @@
         0.6789997816085815
       ],
       "rotation": [
+<<<<<<< HEAD
         -0.026794714853167537,
         -0.026732556521892548,
         -0.7065613865852356,
@@ -59,6 +60,15 @@
       ],
       "scale": [
         0.9999998807907104,
+=======
+        -0.02679471485316753,
+        -0.026732556521892548,
+        -0.7065614461898804,
+        -0.706638753414154
+      ],
+      "scale": [
+        0.9999999403953552,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.9999998211860656,
         0.9999999403953552
       ]
@@ -73,7 +83,11 @@
         -0.06294959783554077
       ],
       "rotation": [
+<<<<<<< HEAD
         -0.06642699241638184,
+=======
+        -0.06642699986696243,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.6115013957023621,
         0.7850273251533508,
         0.073387511074543
@@ -90,18 +104,31 @@
       ],
       "translation": [
         0,
+<<<<<<< HEAD
         0.26611149311065674,
         0
       ],
       "rotation": [
         0.216291218996048,
         0.12430648505687714,
+=======
+        0.2661114931106568,
+        0
+      ],
+      "rotation": [
+        0.2162912338972092,
+        0.12430649250745773,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.0015752052422612906,
         -0.9683818817138672
       ],
       "scale": [
         1,
+<<<<<<< HEAD
         0.9999998211860656,
+=======
+        0.9999998807907104,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1
       ]
     },
@@ -134,7 +161,11 @@
       ],
       "rotation": [
         -0.03726436197757721,
+<<<<<<< HEAD
         -0.319313257932663,
+=======
+        -0.31931325793266296,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.9460535645484924,
         -0.040414959192276
       ],
@@ -170,15 +201,31 @@
         9
       ],
       "translation": [
+<<<<<<< HEAD
         3.725290076417309e-9,
+=======
+        3.725289854372704e-9,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.2661128044128418,
         1.4901200273698123e-8
       ],
       "rotation": [
+<<<<<<< HEAD
         0.2090278267860413,
         -0.32988959550857544,
         -0.05559924989938736,
         -0.9189063906669616
+=======
+        0.20902779698371887,
+        -0.32988959550857544,
+        -0.05559924244880676,
+        -0.9189064502716064
+      ],
+      "scale": [
+        1,
+        1.0000001192092896,
+        1.0000001192092896
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       ]
     },
     {
@@ -186,7 +233,11 @@
         10
       ],
       "translation": [
+<<<<<<< HEAD
         -7.450580152834618e-9,
+=======
+        -7.450579708745408e-9,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.2758241891860962,
         5.5879398885849704e-9
       ],
@@ -204,12 +255,21 @@
     },
     {
       "translation": [
+<<<<<<< HEAD
         -0.002346523106098175,
         -0.06617332994937897,
         0.02785678952932358
       ],
       "rotation": [
         0.026573536917567257,
+=======
+        -0.002346522873267532,
+        -0.06617332994937897,
+        0.027856789529323574
+      ],
+      "rotation": [
+        0.026573536917567253,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.3201442956924439,
         0.9445450901985168,
         0.06808964908123016
@@ -225,18 +285,30 @@
         12
       ],
       "translation": [
+<<<<<<< HEAD
         -1.02445003591356e-8,
+=======
+        -1.024449947095718e-8,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1.4901200273698123e-8,
         0.14541690051555634
       ],
       "rotation": [
         -0.6572523713111877,
         -0.00017969288455788046,
+<<<<<<< HEAD
         -0.00010428010864416136,
         -0.7536706328392029
       ],
       "scale": [
         0.9999999403953552,
+=======
+        -0.00010428009409224616,
+        -0.7536706328392029
+      ],
+      "scale": [
+        1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1,
         1.0000001192092896
       ]
@@ -250,12 +322,20 @@
       "translation": [
         4.6566100975198305e-10,
         0.250516802072525,
+<<<<<<< HEAD
         3.725290076417309e-9
+=======
+        3.725289854372704e-9
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       ],
       "rotation": [
         0.6226037740707397,
         0.00001678345142863691,
+<<<<<<< HEAD
         -0.0000031824047255213377,
+=======
+        -0.0000031824047255213372,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.7825372219085693
       ],
       "scale": [
@@ -275,8 +355,13 @@
       ],
       "rotation": [
         0.2964428961277008,
+<<<<<<< HEAD
         0.03151032328605652,
         -0.652255117893219,
+=======
+        0.031510334461927414,
+        -0.6522551774978638,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.6969160437583923
       ],
       "scale": [
@@ -291,7 +376,11 @@
       ],
       "translation": [
         0,
+<<<<<<< HEAD
         0.24200819432735443,
+=======
+        0.24200820922851565,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -5.96045985901128e-8
       ],
       "rotation": [
@@ -320,7 +409,11 @@
       ],
       "scale": [
         1,
+<<<<<<< HEAD
         1,
+=======
+        1.0000001192092896,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.9999999403953552
       ]
     },
@@ -331,7 +424,11 @@
       "translation": [
         0.0910135880112648,
         0.000014185899999574758,
+<<<<<<< HEAD
         -0.00005805489854537882
+=======
+        -0.000058054902183357626
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       ],
       "rotation": [
         0.6797328591346741,
@@ -340,7 +437,11 @@
         -0.10383165627717972
       ],
       "scale": [
+<<<<<<< HEAD
         1,
+=======
+        1.0000001192092896,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1.0000001192092896,
         1
       ]
@@ -357,7 +458,11 @@
       "rotation": [
         -0.013960935175418854,
         -0.12937255203723907,
+<<<<<<< HEAD
         -0.2522056698799134,
+=======
+        -0.2522056996822357,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.9588848352432252
       ],
       "scale": [
@@ -396,7 +501,11 @@
       "rotation": [
         -0.6606296300888062,
         0.00008344435627805069,
+<<<<<<< HEAD
         0.00007109258876880631,
+=======
+        0.0000710925814928487,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.750711977481842
       ]
     },
@@ -411,6 +520,14 @@
         0.9996904730796814,
         -0.02487966977059841,
         -4.329927776325349e-7
+<<<<<<< HEAD
+=======
+      ],
+      "scale": [
+        1,
+        1.0000001192092896,
+        1
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       ]
     },
     {
@@ -435,7 +552,11 @@
           "material": 0,
           "extensions": {
             "KHR_draco_mesh_compression": {
+<<<<<<< HEAD
               "bufferView": 4,
+=======
+              "bufferView": 20,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
               "attributes": {
                 "JOINTS_0": 0,
                 "NORMAL": 1,
@@ -473,237 +594,623 @@
             "node": 2,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 3,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 1,
+          "interpolation": "LINEAR",
+          "output": 2
+        },
+        {
+          "input": 1,
+          "interpolation": "LINEAR",
+          "output": 3
+        },
+        {
+          "input": 1,
+          "interpolation": "LINEAR",
+          "output": 4
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 11,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 4,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 11,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 5,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 11,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 6,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 5,
+          "interpolation": "LINEAR",
+          "output": 6
+        },
+        {
+          "input": 5,
+          "interpolation": "LINEAR",
+          "output": 7
+        },
+        {
+          "input": 5,
+          "interpolation": "LINEAR",
+          "output": 8
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 12,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 7,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 12,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 8,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 12,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 9,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 9,
+          "interpolation": "LINEAR",
+          "output": 10
+        },
+        {
+          "input": 9,
+          "interpolation": "LINEAR",
+          "output": 11
+        },
+        {
+          "input": 9,
+          "interpolation": "LINEAR",
+          "output": 12
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 19,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 10,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 19,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 11,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 19,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 12,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 13,
+          "interpolation": "LINEAR",
+          "output": 14
+        },
+        {
+          "input": 13,
+          "interpolation": "LINEAR",
+          "output": 15
+        },
+        {
+          "input": 13,
+          "interpolation": "LINEAR",
+          "output": 16
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 20,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 13,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 20,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 14,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 20,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 15,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 17,
+          "interpolation": "LINEAR",
+          "output": 18
+        },
+        {
+          "input": 17,
+          "interpolation": "LINEAR",
+          "output": 19
+        },
+        {
+          "input": 17,
+          "interpolation": "LINEAR",
+          "output": 20
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 16,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 16,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 16,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 17,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 16,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 18,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 21,
+          "interpolation": "LINEAR",
+          "output": 22
+        },
+        {
+          "input": 21,
+          "interpolation": "LINEAR",
+          "output": 23
+        },
+        {
+          "input": 21,
+          "interpolation": "LINEAR",
+          "output": 24
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 17,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 19,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 17,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 20,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 17,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 21,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 25,
+          "interpolation": "LINEAR",
+          "output": 26
+        },
+        {
+          "input": 25,
+          "interpolation": "LINEAR",
+          "output": 27
+        },
+        {
+          "input": 25,
+          "interpolation": "LINEAR",
+          "output": 28
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 18,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 22,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 18,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 23,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 18,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 24,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 29,
+          "interpolation": "LINEAR",
+          "output": 30
+        },
+        {
+          "input": 29,
+          "interpolation": "LINEAR",
+          "output": 31
+        },
+        {
+          "input": 29,
+          "interpolation": "LINEAR",
+          "output": 32
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 13,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 25,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 13,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 26,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 13,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 27,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 33,
+          "interpolation": "LINEAR",
+          "output": 34
+        },
+        {
+          "input": 33,
+          "interpolation": "LINEAR",
+          "output": 35
+        },
+        {
+          "input": 33,
+          "interpolation": "LINEAR",
+          "output": 36
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 14,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 28,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 14,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 29,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 14,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 30,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 37,
+          "interpolation": "LINEAR",
+          "output": 38
+        },
+        {
+          "input": 37,
+          "interpolation": "LINEAR",
+          "output": 39
+        },
+        {
+          "input": 37,
+          "interpolation": "LINEAR",
+          "output": 40
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 15,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 31,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 15,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 32,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 15,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 33,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 41,
+          "interpolation": "LINEAR",
+          "output": 42
+        },
+        {
+          "input": 41,
+          "interpolation": "LINEAR",
+          "output": 43
+        },
+        {
+          "input": 41,
+          "interpolation": "LINEAR",
+          "output": 44
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 7,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 34,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 7,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 35,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 7,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 36,
@@ -721,132 +1228,382 @@
         },
         {
           "sampler": 38,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 45,
+          "interpolation": "LINEAR",
+          "output": 46
+        },
+        {
+          "input": 45,
+          "interpolation": "LINEAR",
+          "output": 47
+        },
+        {
+          "input": 45,
+          "interpolation": "LINEAR",
+          "output": 48
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 8,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 8,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 8,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 39,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 49,
+          "interpolation": "LINEAR",
+          "output": 50
+        },
+        {
+          "input": 49,
+          "interpolation": "LINEAR",
+          "output": 51
+        },
+        {
+          "input": 49,
+          "interpolation": "LINEAR",
+          "output": 52
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 9,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 40,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 9,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 41,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 9,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 42,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 53,
+          "interpolation": "LINEAR",
+          "output": 54
+        },
+        {
+          "input": 53,
+          "interpolation": "LINEAR",
+          "output": 55
+        },
+        {
+          "input": 53,
+          "interpolation": "LINEAR",
+          "output": 56
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 10,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 43,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 10,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 44,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 10,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 45,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 57,
+          "interpolation": "LINEAR",
+          "output": 58
+        },
+        {
+          "input": 57,
+          "interpolation": "LINEAR",
+          "output": 59
+        },
+        {
+          "input": 57,
+          "interpolation": "LINEAR",
+          "output": 60
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 3,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 46,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 3,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 47,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 3,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 48,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 61,
+          "interpolation": "LINEAR",
+          "output": 62
+        },
+        {
+          "input": 61,
+          "interpolation": "LINEAR",
+          "output": 63
+        },
+        {
+          "input": 61,
+          "interpolation": "LINEAR",
+          "output": 64
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 4,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 49,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 4,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 50,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 4,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 51,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 65,
+          "interpolation": "LINEAR",
+          "output": 66
+        },
+        {
+          "input": 65,
+          "interpolation": "LINEAR",
+          "output": 67
+        },
+        {
+          "input": 65,
+          "interpolation": "LINEAR",
+          "output": 68
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 5,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 52,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 5,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 53,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 5,
             "path": "scale"
           }
+<<<<<<< HEAD
         },
         {
           "sampler": 54,
+=======
+        }
+      ],
+      "samplers": [
+        {
+          "input": 69,
+          "interpolation": "LINEAR",
+          "output": 70
+        },
+        {
+          "input": 69,
+          "interpolation": "LINEAR",
+          "output": 71
+        },
+        {
+          "input": 69,
+          "interpolation": "LINEAR",
+          "output": 72
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 6,
             "path": "translation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 55,
+=======
+          "sampler": 1,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 6,
             "path": "rotation"
           }
         },
         {
+<<<<<<< HEAD
           "sampler": 56,
+=======
+          "sampler": 2,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
           "target": {
             "node": 6,
             "path": "scale"
@@ -855,6 +1612,7 @@
       ],
       "samplers": [
         {
+<<<<<<< HEAD
           "input": 0,
           "interpolation": "LINEAR",
           "output": 1
@@ -1138,13 +1896,32 @@
           "input": 72,
           "interpolation": "LINEAR",
           "output": 75
+=======
+          "input": 73,
+          "interpolation": "LINEAR",
+          "output": 74
+        },
+        {
+          "input": 73,
+          "interpolation": "LINEAR",
+          "output": 75
+        },
+        {
+          "input": 73,
+          "interpolation": "LINEAR",
+          "output": 76
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         }
       ]
     }
   ],
   "skins": [
     {
+<<<<<<< HEAD
       "inverseBindMatrices": 76,
+=======
+      "inverseBindMatrices": 0,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "skeleton": 2,
       "joints": [
         2,
@@ -1167,6 +1944,15 @@
         10,
         6
       ],
+<<<<<<< HEAD
+      "name": "Armature"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "byteOffset": 0,
+=======
       "name": "Armature"
     }
   ],
@@ -1175,6 +1961,48 @@
       "bufferView": 0,
       "byteOffset": 0,
       "componentType": 5126,
+      "count": 19,
+      "max": [
+        0.780990481376648,
+        0.9918341040611268,
+        0.9992613196372986,
+        0,
+        1,
+        0.8904604315757751,
+        0.6854007244110107,
+        0,
+        0.79917311668396,
+        0.9999359250068665,
+        0.997134804725647,
+        0,
+        0.20702040195465088,
+        0.5989438891410828,
+        1.001250982284546,
+        1
+      ],
+      "min": [
+        -0.9985063076019288,
+        -0.9971349835395812,
+        -0.9999359250068665,
+        0,
+        -1,
+        -0.8904621005058289,
+        -0.4517692029476166,
+        0,
+        -0.18484599888324735,
+        -0.9853218197822572,
+        -0.997802197933197,
+        0,
+        -0.811928927898407,
+        -1.18982994556427,
+        -1.058609962463379,
+        1
+      ],
+      "type": "MAT4"
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
+      "componentType": 5126,
       "count": 49,
       "max": [
         2
@@ -1182,11 +2010,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 0,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1195,6 +2030,7 @@
         0.7110069990158081
       ],
       "min": [
+<<<<<<< HEAD
         -7.101330190550925e-9,
         -0.030000120401382446,
         0.6399999856948853
@@ -1204,6 +2040,16 @@
     {
       "bufferView": 2,
       "byteOffset": 0,
+=======
+        -7.101329746461715e-9,
+        -0.030000120401382446,
+        0.6399999856948853
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1214,6 +2060,7 @@
       ],
       "min": [
         -0.05146743357181549,
+<<<<<<< HEAD
         -0.03440024703741074,
         -0.7094300389289856,
         -0.7066542506217957
@@ -1223,6 +2070,16 @@
     {
       "bufferView": 1,
       "byteOffset": 588,
+=======
+        -0.034400247037410736,
+        -0.7094300389289856,
+        -0.7066542506217957
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1232,6 +2089,7 @@
       ],
       "min": [
         0.9999998211860656,
+<<<<<<< HEAD
         0.9999998211860656,
         0.9999997615814208
       ],
@@ -1240,6 +2098,15 @@
     {
       "bufferView": 0,
       "byteOffset": 196,
+=======
+        0.9999998807907104,
+        0.9999997615814208
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1248,6 +2115,7 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
@@ -1257,11 +2125,22 @@
       "count": 49,
       "max": [
         0.0009999830508604646,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        0.0009999829344451427,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         3.725289943190546e-8,
         0.1454170048236847
       ],
       "min": [
         0.0009999759495258331,
+<<<<<<< HEAD
         -4.470350134511136e-8,
         0.14541690051555634
       ],
@@ -1270,6 +2149,15 @@
     {
       "bufferView": 2,
       "byteOffset": 784,
+=======
+        -4.470349779239769e-8,
+        0.14541690051555634
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1279,6 +2167,7 @@
         -0.6789330840110779
       ],
       "min": [
+<<<<<<< HEAD
         -0.733797013759613,
         -0.0113212987780571,
         -0.02596380189061165,
@@ -1289,6 +2178,17 @@
     {
       "bufferView": 1,
       "byteOffset": 1764,
+=======
+        -0.7337970733642578,
+        -0.011321297846734524,
+        -0.02596380189061165,
+        -0.703567624092102
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1297,6 +2197,7 @@
         0.999999701976776
       ],
       "min": [
+<<<<<<< HEAD
         0.9999999403953552,
         1.0000001192092896,
         0.9999992847442628
@@ -1306,6 +2207,16 @@
     {
       "bufferView": 0,
       "byteOffset": 392,
+=======
+        1,
+        1.0000001192092896,
+        0.9999992847442628
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1314,11 +2225,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 2352,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1331,11 +2249,18 @@
         0.25051671266555786,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 1568,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1347,6 +2272,7 @@
       "min": [
         0.6224426627159119,
         -0.1380288153886795,
+<<<<<<< HEAD
         -0.06534027308225632,
         -0.782635509967804
       ],
@@ -1355,11 +2281,21 @@
     {
       "bufferView": 1,
       "byteOffset": 2940,
+=======
+        -0.06534028053283691,
+        -0.782635509967804
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         1.0000001192092896,
         1.0000007152557373,
+<<<<<<< HEAD
         0.9999996423721313
       ],
       "min": [
@@ -1372,6 +2308,19 @@
     {
       "bufferView": 0,
       "byteOffset": 588,
+=======
+        0.999999701976776
+      ],
+      "min": [
+        0.9999998211860656,
+        1.0000003576278689,
+        0.9999992847442628
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1380,6 +2329,7 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
@@ -1389,6 +2339,16 @@
       "count": 49,
       "max": [
         2.1420399676230776e-8,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        2.1420399676230772e-8,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         8.940700269022274e-8,
         0.064838707447052
       ],
@@ -1397,6 +2357,7 @@
         2.98022992950564e-8,
         0.06483834981918335
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
@@ -1409,10 +2370,24 @@
         0.02482949569821358,
         0.04200226813554764,
         -0.749857485294342
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        -0.6325308680534363,
+        0.024829493835568428,
+        0.04200226813554764,
+        -0.7498575448989868
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       ],
       "min": [
         -0.6592774987220764,
         -0.03641732409596443,
+<<<<<<< HEAD
         -0.03000718355178833,
         -0.7735550403594971
       ],
@@ -1421,6 +2396,15 @@
     {
       "bufferView": 1,
       "byteOffset": 4116,
+=======
+        -0.03000717982649803,
+        -0.7735550999641418
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1431,6 +2415,7 @@
       "min": [
         0.9999998211860656,
         0.9999995231628418,
+<<<<<<< HEAD
         0.9999996423721313
       ],
       "type": "VEC3"
@@ -1438,6 +2423,14 @@
     {
       "bufferView": 0,
       "byteOffset": 784,
+=======
+        0.999999701976776
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1446,6 +2439,7 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
@@ -1455,10 +2449,21 @@
       "count": 49,
       "max": [
         7.450580152834618e-9,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        7.450579708745408e-9,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.0520397387444973,
         0
       ],
       "min": [
+<<<<<<< HEAD
         7.450580152834618e-9,
         0.0520397387444973,
         0
@@ -1468,6 +2473,16 @@
     {
       "bufferView": 2,
       "byteOffset": 3136,
+=======
+        7.450579708745408e-9,
+        0.0520397387444973,
+        0
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1480,6 +2495,7 @@
         -0.09362706542015076,
         0.995067298412323,
         -0.09058911353349686,
+<<<<<<< HEAD
         -0.002585495822131634
       ],
       "type": "VEC4"
@@ -1487,6 +2503,14 @@
     {
       "bufferView": 1,
       "byteOffset": 5292,
+=======
+        -0.0025854958221316338
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1499,11 +2523,18 @@
         0.9999998211860656,
         1.0000001192092896
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 980,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1512,11 +2543,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 5880,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1529,11 +2567,18 @@
         0.000013977300113765525,
         -0.00005596880146185868
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 3920,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1548,16 +2593,27 @@
         -0.6041955351829529,
         -0.508333683013916
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 6468,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         1.0000005960464478,
+<<<<<<< HEAD
         1,
+=======
+        1.0000001192092896,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1.0000004768371584
       ],
       "min": [
@@ -1565,11 +2621,18 @@
         0.9999995827674866,
         1.0000001192092896
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 1176,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1578,11 +2641,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 7056,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1595,11 +2665,18 @@
         0.24200910329818728,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 4704,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1609,16 +2686,27 @@
         -0.9007523059844972
       ],
       "min": [
+<<<<<<< HEAD
         -0.08755125850439072,
+=======
+        -0.08755125105381012,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.15304648876190186,
         -0.4198120832443238,
         -0.989989936351776
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 7644,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1631,11 +2719,18 @@
         0.9999992847442628,
         0.9999995231628418
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 1372,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1644,20 +2739,32 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 8232,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         -2.98022992950564e-8,
+<<<<<<< HEAD
         0.18779130280017856,
+=======
+        0.18779130280017853,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0
       ],
       "min": [
         -2.98022992950564e-8,
+<<<<<<< HEAD
         0.18779130280017856,
         0
       ],
@@ -1666,6 +2773,15 @@
     {
       "bufferView": 2,
       "byteOffset": 5488,
+=======
+        0.18779130280017853,
+        0
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1680,11 +2796,18 @@
         -0.0806758776307106,
         -0.9989553689956664
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 8820,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1693,6 +2816,7 @@
         1.0000005960464478
       ],
       "min": [
+<<<<<<< HEAD
         0.9999997615814208,
         1.0000005960464478,
         1.000000238418579
@@ -1702,6 +2826,16 @@
     {
       "bufferView": 0,
       "byteOffset": 1568,
+=======
+        0.999999701976776,
+        1.0000005960464478,
+        1.000000238418579
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1710,11 +2844,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 9408,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1723,6 +2864,7 @@
         -0.00006240609945962206
       ],
       "min": [
+<<<<<<< HEAD
         -0.0880000963807106,
         0.00006249549915082753,
         -0.00006282330286921933
@@ -1732,17 +2874,32 @@
     {
       "bufferView": 2,
       "byteOffset": 6272,
+=======
+        -0.0880001038312912,
+        0.00006249549915082753,
+        -0.00006282330286921933
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         0.6748494505882263,
+<<<<<<< HEAD
         0.31521570682525635,
+=======
+        0.3152157068252564,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.300369679927826,
         -0.3483264744281769
       ],
       "min": [
         0.3661315143108368,
         0.09874838590621948,
+<<<<<<< HEAD
         -0.6449660062789917,
         -0.8451733589172363
       ],
@@ -1751,6 +2908,15 @@
     {
       "bufferView": 1,
       "byteOffset": 9996,
+=======
+        -0.6449660658836365,
+        -0.8451733589172363
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1761,6 +2927,7 @@
       "min": [
         0.9999997615814208,
         0.9999996423721313,
+<<<<<<< HEAD
         0.9999996423721313
       ],
       "type": "VEC3"
@@ -1768,6 +2935,14 @@
     {
       "bufferView": 0,
       "byteOffset": 1764,
+=======
+        0.999999701976776
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1776,11 +2951,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 10584,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1793,11 +2975,18 @@
         0.24200810492038727,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 7056,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1812,11 +3001,18 @@
         -0.2270231395959854,
         -0.3146948218345642
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 11172,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1826,6 +3022,7 @@
       ],
       "min": [
         0.9999999403953552,
+<<<<<<< HEAD
         0.9999995231628418,
         0.999999701976776
       ],
@@ -1834,6 +3031,15 @@
     {
       "bufferView": 0,
       "byteOffset": 1960,
+=======
+        0.9999995827674866,
+        0.9999997615814208
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1842,20 +3048,32 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 11760,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         0,
+<<<<<<< HEAD
         0.1877920925617218,
+=======
+        0.187792107462883,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0
       ],
       "min": [
         0,
+<<<<<<< HEAD
         0.1877920925617218,
         0
       ],
@@ -1864,16 +3082,30 @@
     {
       "bufferView": 2,
       "byteOffset": 7840,
+=======
+        0.187792107462883,
+        0
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         0.15000686049461365,
+<<<<<<< HEAD
         0.2620651721954346,
+=======
+        0.26206517219543457,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0.06808223575353622,
         -0.9487173557281494
       ],
       "min": [
         -0.0010455237934365869,
+<<<<<<< HEAD
         0.2568579018115998,
         -0.10152826458215714,
         -0.9656248688697816
@@ -1883,6 +3115,16 @@
     {
       "bufferView": 1,
       "byteOffset": 12348,
+=======
+        0.25685790181159973,
+        -0.10152826458215714,
+        -0.9656248688697816
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1893,6 +3135,7 @@
       "min": [
         0.9999996423721313,
         1.0000003576278689,
+<<<<<<< HEAD
         0.999999463558197
       ],
       "type": "VEC3"
@@ -1900,6 +3143,14 @@
     {
       "bufferView": 0,
       "byteOffset": 2156,
+=======
+        0.9999995231628418
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1908,11 +3159,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 12936,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1925,11 +3183,18 @@
         -0.028518760576844215,
         -0.06296365708112717
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 8624,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1942,6 +3207,7 @@
         0.1658332496881485,
         -0.7997090816497803,
         0.4959096908569336,
+<<<<<<< HEAD
         -0.3118112683296204
       ],
       "type": "VEC4"
@@ -1949,6 +3215,14 @@
     {
       "bufferView": 1,
       "byteOffset": 13524,
+=======
+        -0.3118112981319428
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1961,11 +3235,18 @@
         0.9999995231628418,
         0.9999996423721313
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 2352,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1974,11 +3255,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 14112,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -1991,11 +3279,18 @@
         0.26611289381980896,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 9408,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2007,6 +3302,7 @@
       "min": [
         -0.03036016784608364,
         -0.3419179916381836,
+<<<<<<< HEAD
         -0.28916242718696594,
         -0.9452491998672484
       ],
@@ -2015,6 +3311,15 @@
     {
       "bufferView": 1,
       "byteOffset": 14700,
+=======
+        -0.289162427186966,
+        -0.9452491998672484
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2027,11 +3332,18 @@
         0.9999996423721313,
         0.9999994039535524
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 2548,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2040,11 +3352,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 15288,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2057,11 +3376,18 @@
         0.2758241891860962,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 10192,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2071,20 +3397,32 @@
         -0.13506969809532166
       ],
       "min": [
+<<<<<<< HEAD
         0.8542653322219849,
+=======
+        0.8542653918266296,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.05430477112531662,
         -0.00011262076441198587,
         -0.5192484259605408
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 15876,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         1.0000005960464478,
+<<<<<<< HEAD
         1.0000003576278689,
         1.0000004768371584
       ],
@@ -2098,6 +3436,20 @@
     {
       "bufferView": 0,
       "byteOffset": 2744,
+=======
+        1.0000004768371584,
+        1.0000004768371584
+      ],
+      "min": [
+        1.000000238418579,
+        1,
+        1.0000001192092896
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2106,6 +3458,7 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
@@ -2115,6 +3468,16 @@
       "count": 49,
       "max": [
         -0.002346449065953493,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        -0.0023464488331228495,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.06617332249879837,
         0.02785664983093739
       ],
@@ -2123,6 +3486,7 @@
         -0.06617333739995956,
         0.02785659022629261
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
@@ -2132,6 +3496,16 @@
       "count": 49,
       "max": [
         0.020624300464987755,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        0.02062430046498776,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.23465925455093384,
         0.9716955423355104,
         0.0638260766863823
@@ -2142,11 +3516,18 @@
         0.8410344123840332,
         0.016216862946748737
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 17052,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2155,6 +3536,7 @@
         1.0000005960464478
       ],
       "min": [
+<<<<<<< HEAD
         0.9999997615814208,
         1.000000238418579,
         0.9999998211860656
@@ -2164,6 +3546,16 @@
     {
       "bufferView": 0,
       "byteOffset": 2940,
+=======
+        0.9999998211860656,
+        1.000000238418579,
+        0.9999998211860656
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2172,11 +3564,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 17640,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2189,11 +3588,18 @@
         -0.02857035957276821,
         -0.06294971704483032
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 11760,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2205,6 +3611,7 @@
       "min": [
         -0.07457219809293747,
         -0.902503490447998,
+<<<<<<< HEAD
         0.4130511581897736,
         0.03284534439444542
       ],
@@ -2213,6 +3620,15 @@
     {
       "bufferView": 1,
       "byteOffset": 18228,
+=======
+        0.413051187992096,
+        0.03284534439444542
+      ],
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2222,6 +3638,7 @@
       ],
       "min": [
         0.9999998211860656,
+<<<<<<< HEAD
         0.9999995231628418,
         0.9999996423721313
       ],
@@ -2230,6 +3647,15 @@
     {
       "bufferView": 0,
       "byteOffset": 3136,
+=======
+        0.9999995827674866,
+        0.9999996423721313
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2238,20 +3664,32 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 18816,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         -1.1175900205273592e-8,
+<<<<<<< HEAD
         0.26611149311065674,
+=======
+        0.2661114931106568,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         0
       ],
       "min": [
         -1.1175900205273592e-8,
+<<<<<<< HEAD
         0.26611149311065674,
         0
       ],
@@ -2260,12 +3698,25 @@
     {
       "bufferView": 2,
       "byteOffset": 12544,
+=======
+        0.2661114931106568,
+        0
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         0.8507033586502075,
         0.14946134388446808,
+<<<<<<< HEAD
         0.04984175786376,
+=======
+        0.04984176158905029,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.5191445350646973
       ],
       "min": [
@@ -2274,16 +3725,27 @@
         -0.026268262416124344,
         -0.9922308921813964
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 19404,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
         1.0000005960464478,
+<<<<<<< HEAD
         1.000000238418579,
+=======
+        1.0000003576278689,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         1.0000005960464478
       ],
       "min": [
@@ -2291,11 +3753,18 @@
         0.9999995231628418,
         0.9999998211860656
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 0,
       "byteOffset": 3332,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2304,11 +3773,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 19992,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2321,11 +3797,18 @@
         0.2758249044418335,
         0
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
       "bufferView": 2,
       "byteOffset": 13328,
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2340,11 +3823,18 @@
         -0.06820148974657059,
         -0.4750169813632965
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 20580,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2353,6 +3843,7 @@
         1.0000003576278689
       ],
       "min": [
+<<<<<<< HEAD
         0.9999991655349731,
         0.9999995231628418,
         0.9999999403953552
@@ -2362,6 +3853,16 @@
     {
       "bufferView": 0,
       "byteOffset": 3528,
+=======
+        0.999999225139618,
+        0.9999995231628418,
+        1
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2370,11 +3871,18 @@
       "min": [
         0
       ],
+<<<<<<< HEAD
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 21168,
+=======
+      "type": "SCALAR",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2385,6 +3893,7 @@
       "min": [
         -0.0014585329918190837,
         -0.06619889289140701,
+<<<<<<< HEAD
         0.02785669080913067
       ],
       "type": "VEC3"
@@ -2396,6 +3905,18 @@
       "count": 49,
       "max": [
         -0.009607579559087753,
+=======
+        0.02785668894648552
+      ],
+      "type": "VEC3",
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "count": 49,
+      "max": [
+        -0.00960757862776518,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.2635453343391419,
         0.9620476961135864,
         0.06995902955532074
@@ -2406,11 +3927,18 @@
         0.8689604997634888,
         -0.06424159556627274
       ],
+<<<<<<< HEAD
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "byteOffset": 21756,
+=======
+      "type": "VEC4",
+      "byteOffset": 0
+    },
+    {
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "componentType": 5126,
       "count": 49,
       "max": [
@@ -2423,6 +3951,7 @@
         0.9999997615814208,
         0.9999994039535524
       ],
+<<<<<<< HEAD
       "type": "VEC3"
     },
     {
@@ -2467,6 +3996,10 @@
         1
       ],
       "type": "MAT4"
+=======
+      "type": "VEC3",
+      "byteOffset": 0
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
     },
     {
       "componentType": 5123,
@@ -2520,7 +4053,11 @@
         1.5065499544143677
       ],
       "min": [
+<<<<<<< HEAD
         -0.13099999725818637,
+=======
+        -0.13100001215934753,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
         -0.5691370964050293,
         0
       ],
@@ -2596,6 +4133,7 @@
     {
       "buffer": 0,
       "byteOffset": 0,
+<<<<<<< HEAD
       "byteLength": 3724
     },
     {
@@ -2617,18 +4155,405 @@
       "buffer": 0,
       "byteOffset": 42180,
       "byteLength": 27757
+=======
+      "byteLength": 1216
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1216,
+      "byteLength": 794
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2010,
+      "byteLength": 738
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2748,
+      "byteLength": 568
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3316,
+      "byteLength": 748
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4064,
+      "byteLength": 578
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4642,
+      "byteLength": 749
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5391,
+      "byteLength": 573
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5964,
+      "byteLength": 501
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6465,
+      "byteLength": 792
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7257,
+      "byteLength": 559
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7816,
+      "byteLength": 552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8368,
+      "byteLength": 810
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9178,
+      "byteLength": 600
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9778,
+      "byteLength": 570
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 10348,
+      "byteLength": 706
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 11054,
+      "byteLength": 804
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 11858,
+      "byteLength": 598
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 12456,
+      "byteLength": 600
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13056,
+      "byteLength": 742
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13798,
+      "byteLength": 19890
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
     }
   ],
   "buffers": [
     {
+<<<<<<< HEAD
       "byteLength": 69937,
+=======
+      "byteLength": 33688,
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
       "uri": "0.bin"
     }
   ],
   "extensionsRequired": [
+<<<<<<< HEAD
     "KHR_draco_mesh_compression"
   ],
   "extensionsUsed": [
     "KHR_draco_mesh_compression"
   ]
+=======
+    "Draco_animation_compression",
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "Draco_animation_compression",
+    "KHR_draco_mesh_compression"
+  ],
+  "extensions": {
+    "Draco_animation_compression": [
+      {
+        "input": 1,
+        "outputs": [
+          2,
+          3,
+          4
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 1
+      },
+      {
+        "input": 5,
+        "outputs": [
+          6,
+          7,
+          8
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 2
+      },
+      {
+        "input": 9,
+        "outputs": [
+          10,
+          11,
+          12
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 3
+      },
+      {
+        "input": 13,
+        "outputs": [
+          14,
+          15,
+          16
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 4
+      },
+      {
+        "input": 17,
+        "outputs": [
+          18,
+          19,
+          20
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 5
+      },
+      {
+        "input": 21,
+        "outputs": [
+          22,
+          23,
+          24
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 6
+      },
+      {
+        "input": 25,
+        "outputs": [
+          26,
+          27,
+          28
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 7
+      },
+      {
+        "input": 29,
+        "outputs": [
+          30,
+          31,
+          32
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 8
+      },
+      {
+        "input": 33,
+        "outputs": [
+          34,
+          35,
+          36
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 9
+      },
+      {
+        "input": 37,
+        "outputs": [
+          38,
+          39,
+          40
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 10
+      },
+      {
+        "input": 41,
+        "outputs": [
+          42,
+          43,
+          44
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 11
+      },
+      {
+        "input": 45,
+        "outputs": [
+          46,
+          47,
+          48
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 12
+      },
+      {
+        "input": 49,
+        "outputs": [
+          50,
+          51,
+          52
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 13
+      },
+      {
+        "input": 53,
+        "outputs": [
+          54,
+          55,
+          56
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 14
+      },
+      {
+        "input": 57,
+        "outputs": [
+          58,
+          59,
+          60
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 15
+      },
+      {
+        "input": 61,
+        "outputs": [
+          62,
+          63,
+          64
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 16
+      },
+      {
+        "input": 65,
+        "outputs": [
+          66,
+          67,
+          68
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 17
+      },
+      {
+        "input": 69,
+        "outputs": [
+          70,
+          71,
+          72
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 18
+      },
+      {
+        "input": 73,
+        "outputs": [
+          74,
+          75,
+          76
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 19
+      }
+    ]
+  }
+>>>>>>> merge_draco_anim_ext_to_dev_2018-01-23
 }
