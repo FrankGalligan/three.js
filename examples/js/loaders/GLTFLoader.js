@@ -1775,15 +1775,6 @@ THREE.GLTFLoader = ( function () {
 
 		var accessorDef = this.json.accessors[ accessorIndex ];
 
-		if ( accessorDef.bufferView === undefined && accessorDef.sparse === undefined ) {
-
-			// Ignore empty accessors, which may be used to declare runtime
-			// information about attributes coming from another source (e.g. Draco
-			// compression extension).
-			return null;
-
-		}
-
 		var pendingBufferViews = [];
 
 		if ( accessorDef.bufferView !== undefined ) {
