@@ -90,25 +90,14 @@
       "primitives": [
         {
           "attributes": {
-            "JOINTS_0": 10,
-            "NORMAL": 11,
-            "POSITION": 12,
-            "WEIGHTS_0": 13
+            "JOINTS_0": 1,
+            "NORMAL": 2,
+            "POSITION": 3,
+            "WEIGHTS_0": 4
           },
-          "indices": 9,
+          "indices": 0,
           "mode": 4,
-          "material": 0,
-          "extensions": {
-            "KHR_draco_mesh_compression": {
-              "bufferView": 4,
-              "attributes": {
-                "JOINTS_0": 0,
-                "NORMAL": 1,
-                "POSITION": 2,
-                "WEIGHTS_0": 3
-              }
-            }
-          }
+          "material": 0
         }
       ],
       "name": "Cylinder"
@@ -162,41 +151,41 @@
       ],
       "samplers": [
         {
-          "input": 0,
-          "interpolation": "LINEAR",
-          "output": 1
-        },
-        {
-          "input": 0,
-          "interpolation": "LINEAR",
-          "output": 2
-        },
-        {
-          "input": 0,
-          "interpolation": "LINEAR",
-          "output": 3
-        },
-        {
-          "input": 4,
-          "interpolation": "LINEAR",
-          "output": 5
-        },
-        {
-          "input": 4,
-          "interpolation": "LINEAR",
-          "output": 6
-        },
-        {
-          "input": 4,
+          "input": 6,
           "interpolation": "LINEAR",
           "output": 7
+        },
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 8
+        },
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 9
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 11
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 12
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 13
         }
       ]
     }
   ],
   "skins": [
     {
-      "inverseBindMatrices": 8,
+      "inverseBindMatrices": 5,
       "skeleton": 2,
       "joints": [
         2,
@@ -209,137 +198,90 @@
     {
       "bufferView": 0,
       "byteOffset": 0,
-      "componentType": 5126,
-      "count": 3,
+      "componentType": 5123,
+      "count": 564,
       "max": [
-        2.083333015441895
+        95
       ],
       "min": [
-        0.04166661947965622
+        0
       ],
       "type": "SCALAR"
     },
     {
       "bufferView": 1,
       "byteOffset": 0,
-      "componentType": 5126,
-      "count": 3,
+      "componentType": 5123,
+      "count": 96,
       "max": [
+        1,
+        1,
         0,
-        -3.156060017772689e-7,
-        -4.1803297996521
+        0
       ],
       "min": [
         0,
-        -3.156060017772689e-7,
-        -4.1803297996521
+        0,
+        0,
+        0
       ],
-      "type": "VEC3"
+      "type": "VEC4"
     },
     {
       "bufferView": 2,
       "byteOffset": 0,
       "componentType": 5126,
-      "count": 3,
+      "count": 96,
       "max": [
-        -0.7047404050827026,
-        0,
-        0,
-        -0.7094652056694031
+        0.998198390007019,
+        0.998198390007019,
+        0.6888381242752075
       ],
       "min": [
-        -0.7047404050827026,
-        0,
-        0,
-        -0.7094652056694031
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 36,
-      "componentType": 5126,
-      "count": 3,
-      "max": [
-        1,
-        0.9999998807907104,
-        0.9999998807907104
-      ],
-      "min": [
-        1,
-        0.9999998807907104,
-        0.9999998807907104
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 12,
-      "componentType": 5126,
-      "count": 3,
-      "max": [
-        2.083333015441895
-      ],
-      "min": [
-        0.04166661947965622
-      ],
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 72,
-      "componentType": 5126,
-      "count": 3,
-      "max": [
-        0,
-        4.18717098236084,
-        0
-      ],
-      "min": [
-        0,
-        4.18717098236084,
-        0
+        -0.998198390007019,
+        -0.998198390007019,
+        -0.6444730758666992
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 48,
+      "byteOffset": 1152,
       "componentType": 5126,
-      "count": 3,
-      "max": [
-        0.2933785021305084,
-        -9.947898149675895e-8,
-        -0.0002783441450446844,
-        -0.9559963345527648
-      ],
-      "min": [
-        -0.0020521103870123625,
-        -0.00008614854596089572,
-        -0.00029137087403796613,
-        -0.999997854232788
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 108,
-      "componentType": 5126,
-      "count": 3,
+      "count": 96,
       "max": [
         1,
         1,
-        1.0000001192092896
+        4.575077056884766
       ],
       "min": [
-        1,
-        1,
-        1.0000001192092896
+        -1,
+        -0.9999995827674866,
+        -4.575077056884766
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 3,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 96,
+      "max": [
+        1,
+        0.26139819622039795,
+        0,
+        0
+      ],
+      "min": [
+        0.738601803779602,
+        0,
+        0,
+        0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
       "byteOffset": 0,
       "componentType": 5126,
       "count": 2,
@@ -382,79 +324,120 @@
       "type": "MAT4"
     },
     {
-      "componentType": 5123,
-      "count": 564,
+      "componentType": 5126,
+      "count": 3,
       "max": [
-        95
+        2.083333015441895
       ],
       "min": [
-        0
+        0.04166661947965622
       ],
       "type": "SCALAR"
     },
     {
-      "componentType": 5123,
-      "count": 96,
-      "max": [
-        1,
-        1,
-        0,
-        0
-      ],
-      "min": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "type": "VEC4"
-    },
-    {
       "componentType": 5126,
-      "count": 96,
+      "count": 3,
       "max": [
-        0.998198390007019,
-        0.998198390007019,
-        0.6888381242752075
+        0,
+        -3.156060017772689e-7,
+        -4.1803297996521
       ],
       "min": [
-        -0.998198390007019,
-        -0.998198390007019,
-        -0.6444730758666992
+        0,
+        -3.156060017772689e-7,
+        -4.1803297996521
       ],
       "type": "VEC3"
     },
     {
       "componentType": 5126,
-      "count": 96,
+      "count": 3,
       "max": [
-        1,
-        1,
-        4.575077056884766
+        -0.7047404050827026,
+        0,
+        0,
+        -0.7094652056694031
       ],
       "min": [
-        -1,
-        -0.9999995827674866,
-        -4.575077056884766
+        -0.7047404050827026,
+        0,
+        0,
+        -0.7094652056694031
+      ],
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 3,
+      "max": [
+        1,
+        0.9999998807907104,
+        0.9999998807907104
+      ],
+      "min": [
+        1,
+        0.9999998807907104,
+        0.9999998807907104
       ],
       "type": "VEC3"
     },
     {
       "componentType": 5126,
-      "count": 96,
+      "count": 3,
       "max": [
-        1,
-        0.26139819622039795,
+        2.083333015441895
+      ],
+      "min": [
+        0.04166661947965622
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 3,
+      "max": [
         0,
+        4.18717098236084,
         0
       ],
       "min": [
-        0.738601803779602,
         0,
-        0,
+        4.18717098236084,
         0
       ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 3,
+      "max": [
+        0.2933785021305084,
+        -9.947898149675895e-8,
+        -0.0002783441450446844,
+        -0.9559963345527648
+      ],
+      "min": [
+        -0.0020521103870123625,
+        -0.00008614854596089572,
+        -0.00029137087403796613,
+        -0.999997854232788
+      ],
       "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 3,
+      "max": [
+        1,
+        1,
+        1.0000001192092896
+      ],
+      "min": [
+        1,
+        1,
+        1.0000001192092896
+      ],
+      "type": "VEC3"
     }
   ],
   "materials": [
@@ -480,39 +463,88 @@
     {
       "buffer": 0,
       "byteOffset": 0,
-      "byteLength": 24
+      "byteLength": 1128,
+      "target": 34963
     },
     {
       "buffer": 0,
-      "byteOffset": 24,
-      "byteLength": 144
+      "byteOffset": 1128,
+      "byteLength": 768,
+      "byteStride": 8,
+      "target": 34962
     },
     {
       "buffer": 0,
-      "byteOffset": 168,
-      "byteLength": 96
+      "byteOffset": 1896,
+      "byteLength": 2304,
+      "byteStride": 12,
+      "target": 34962
     },
     {
       "buffer": 0,
-      "byteOffset": 264,
+      "byteOffset": 4200,
+      "byteLength": 1536,
+      "byteStride": 16,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5736,
       "byteLength": 128
     },
     {
       "buffer": 0,
-      "byteOffset": 392,
-      "byteLength": 1008
+      "byteOffset": 5864,
+      "byteLength": 187
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6051,
+      "byteLength": 210
     }
   ],
   "buffers": [
     {
-      "byteLength": 1400,
+      "byteLength": 6261,
       "uri": "0.bin"
     }
   ],
   "extensionsRequired": [
-    "KHR_draco_mesh_compression"
+    "Draco_animation_compression"
   ],
   "extensionsUsed": [
-    "KHR_draco_mesh_compression"
-  ]
+    "Draco_animation_compression"
+  ],
+  "extensions": {
+    "Draco_animation_compression": [
+      {
+        "input": 6,
+        "outputs": [
+          7,
+          8,
+          9
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 5
+      },
+      {
+        "input": 10,
+        "outputs": [
+          11,
+          12,
+          13
+        ],
+        "attributesId": [
+          1,
+          2,
+          3
+        ],
+        "bufferView": 6
+      }
+    ]
+  }
 }
