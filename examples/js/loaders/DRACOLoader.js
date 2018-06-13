@@ -401,6 +401,75 @@ THREE.DRACOLoader.prototype = {
         if (typeof this.attributeOptions[attributeName] === 'undefined')
           this.attributeOptions[attributeName] = {};
         return this.attributeOptions[attributeName];
+    },
+
+    supportAnimationDecoding: function() {
+        if (typeof DracoAnimationDecoderModule === 'undefined') {
+          // No animation decoder is found.
+          return false;
+        }
+        return true;
+    },
+
+    decodeDracoAnimation: function(rawBuffer) {
+      console.log("Calling decodeDracoAnimation in DracoLoader");
+      if (typeof DracoAnimationDecoderModule === 'undefined') {
+          console.log('No animation decoder is found.');
+          return;
+        }
+
+        const decoderModule = DracoAnimationDecoderModule();
+        const buffer = new decoderModule.DecoderBuffer();
+        buffer.Init(new Int8Array(rawBuffer), rawBuffer.byteLength);
+        const decoder = new decoderModule.AnimationDecoder();
+        console.log('Animation decoder is created.');
+
+        const dracoAnimation = new decoderModule.KeyframeAnimation();
+        decoder.DecodeBufferToKeyframeAnimation(buffer, dracoAnimation);
+
+        if (dracoAnimation.ptr == 0) {
+          console.log("Error: Decode animation failed.");
+          return;
+        }
+        const numKeyframes = dracoAnimation.num_frames();
+        console.log("Number of frames: " + numKeyframes);
+
+        // Get timestamps.
+        const timestampAttData = new decoderModule.DracoFloat32Array();
+        if (!decoder.GetTimestamps(dracoAnimation, timestampAttData)) {
+          console.log("Error: Get timestamps failed.");
+          return;
+        }
+        const timestamps = new Float32Array(numKeyframes);
+        for (let i = 0; i < numKeyframes; ++i) {
+          timestamps[i] = timestampAttData.GetValue(i);
+        }
+
+        const numAnimations = dracoAnimation.num_animations();
+        const keyframes = new Array(numAnimations);
+        for (let keyframeId = 0; keyframeId < numAnimations; ++keyframeId) {
+          const animationAttData = new decoderModule.DracoFloat32Array();
+          // The id of keyframe attribute starts at 1.
+          if (!decoder.GetKeyframes(dracoAnimation, keyframeId + 1,
+                                    animationAttData)) {
+            console.log("Error: Get keyframes failed.");
+            return;
+          }
+          keyframes[keyframeId] = new Float32Array(animationAttData.size());
+          for (let i = 0; i < animationAttData.size(); ++i) {
+            keyframes[keyframeId][i] = animationAttData.GetValue(i);
+          }
+        }
+
+        const decodedAnimation = {
+          timestamps : timestamps,
+          keyframes : keyframes
+        }
+        /*
+        if (resolve !== undefined)
+          resolve();
+          */
+        return decodedAnimation;
     }
 };
 

@@ -52,6 +52,8 @@
 		<script src="../build/three.js"></script>
 		<script src="js/libs/dat.gui.min.js"></script>
 		<script src="js/controls/OrbitControls.js"></script>
+                <!-- <script src="js/loaders/draco/draco_decoder.js"></script> -->
+                <script src="js/libs/draco/gltf/draco_animation_decoder.js"></script>
 		<script src="js/loaders/DRACOLoader.js"></script>
 		<script src="js/loaders/DDSLoader.js"></script>
 		<script src="js/loaders/GLTFLoader.js"></script>
@@ -268,6 +270,7 @@
 				}
 
 				loader = new THREE.GLTFLoader();
+				loader.setDRACOLoader( new THREE.DRACOLoader( undefined, {type: 'js'} ) );
 
 				THREE.DRACOLoader.setDecoderPath( 'js/libs/draco/gltf/' );
 				loader.setDRACOLoader( new THREE.DRACOLoader() );
