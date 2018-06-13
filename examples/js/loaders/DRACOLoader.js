@@ -483,6 +483,7 @@ THREE.DRACOLoader.decoderModulePromise = null;
  */
 THREE.DRACOLoader.setDecoderPath = function ( path ) {
   THREE.DRACOLoader.decoderPath = path;
+  THREE.DRACOLoader._loadScript( path + 'draco_animation_decoder.js' );
 };
 
 /**
