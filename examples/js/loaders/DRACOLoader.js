@@ -21,6 +21,8 @@ THREE.DRACOLoader = function(manager) {
     this.timeLoaded = 0;
     this.manager = manager || THREE.DefaultLoadingManager;
     this.materials = null;
+    this.materialFilename = null;
+    this.materialIndices = [];
     this.verbosity = 0;
     this.attributeOptions = {};
     this.drawMode = THREE.TrianglesDrawMode;
@@ -353,6 +355,7 @@ THREE.DRACOLoader.prototype = {
           geometry.setIndex(new(geometryBuffer.indices.length > 65535 ?
                 THREE.Uint32BufferAttribute : THREE.Uint16BufferAttribute)
               (geometryBuffer.indices, 1));
+          this.parseMaterialData(decoder, dracoDecoder, dracoGeometry);
         }
         var posTransform = new dracoDecoder.AttributeQuantizationTransform();
         if (posTransform.InitFromAttribute(posAttribute)) {
@@ -380,6 +383,67 @@ THREE.DRACOLoader.prototype = {
           console.log('Import time: ' + this.import_time);
         }
         return geometry;
+    },
+
+    parseMaterialData: function(decoder, decoderModule, dracoGeometry) {
+        // Check if material data was encoded into the Draco geometry.
+        var materialAttrId = decoder.GetAttributeIdByName(dracoGeometry, 'material');
+        if (materialAttrId === -1) {
+          return;
+        }
+        var materialMetadata = decoder.GetAttributeMetadata(dracoGeometry, materialAttrId);
+        if (materialMetadata.ptr === 0) {
+          return;
+        }
+
+        var metadataQuerier = new decoderModule.MetadataQuerier();
+        var entryCount = metadataQuerier.NumEntries(materialMetadata);
+        var materialIndexToName = {};
+        for (var i = 0; i < entryCount; ++i) {
+          var entryName = metadataQuerier.GetEntryName(materialMetadata, i);
+          // Check entry is not "reserved" material entries.
+          if (entryName === 'name') {
+            if (metadataQuerier.GetStringEntry(materialMetadata, entryName) !== 'material') {
+              decoderModule.destroy(metadataQuerier);
+              return;
+            }
+          } else if (entryName === 'file_name') {
+            this.materialFilename = metadataQuerier.GetStringEntry(materialMetadata, entryName);
+          } else {
+            var intEntry = metadataQuerier.GetIntEntry(materialMetadata, entryName);
+            materialIndexToName[intEntry.toString()] = entryName;
+          }
+        }
+        decoderModule.destroy(metadataQuerier);
+
+        if (this.materialFilename === null) {
+          return;
+        }
+
+        var materialAttr = decoder.GetAttribute(dracoGeometry, materialAttrId);
+        var materialAttrData = new decoderModule.DracoInt32Array();
+        decoder.GetAttributeInt32ForAllPoints(dracoGeometry, materialAttr, materialAttrData);
+
+        this.materialIndices = [];
+        var face = new decoderModule.DracoInt32Array();
+        for (var i = 0; i < dracoGeometry.num_faces(); i++) {
+          decoder.GetFaceFromMesh(dracoGeometry, i, face);
+          var materialIndex = materialAttrData.GetValue(face.GetValue(0));
+          this.materialIndices.push(materialIndex);
+        }
+        decoderModule.destroy(face);
+        decoderModule.destroy(materialAttrData);
+    },
+
+    addMaterialGroupsTo3JSGeometry: function(threejsGeometry) {
+        if (this.materialIndices.length === 0) {
+          return false;
+        }
+
+        for (var i = 0; i < this.materialIndices.length; i++) {
+          threejsGeometry.addGroup(i * 3, 3, this.materialIndices[i]);
+        }
+        return true;
     },
 
     isVersionSupported: function(version, callback) {

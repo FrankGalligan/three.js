@@ -1,0 +1,23 @@
+newmtl mat1
+  Ka 1.0 1.0 1.0
+  Kd 1.0 1.0 1.0
+
+newmtl mat2
+  Ka 0.0 0.0 0.0
+  Kd 0.0 0.0 0.0
+
+newmtl mat3
+  Ka 1.0 0.0 0.0
+  Kd 1.0 0.0 0.0
+
+newmtl mat4
+  Ka 0.0 1.0 0.0
+  Kd 0.0 1.0 0.0
+
+newmtl mat5
+  Ka 0.0 0.0 1.0
+  Kd 0.0 0.0 1.0
+
+newmtl mat6
+  Ka 1.0 0.0 1.0
+  Kd 1.0 0.0 1.0
